@@ -3,7 +3,7 @@ import os
 import time
 
 import requests  # type: ignore
-from flask import Blueprint, abort, g, jsonify, make_response, redirect, render_template, request, url_for  # type: ignore
+from flask import Blueprint, abort, g, jsonify, make_response, redirect, render_template, request, url_for  # type: ignore  # type: ignore
 from werkzeug.exceptions import abort  # type: ignore
 
 from flaskr.auth import login_required
@@ -40,8 +40,11 @@ bp = Blueprint("scc", __name__)
 
 @bp.after_request
 def after_request(response):
-    header = response.headers
-    header["Access-Control-Allow-Origin"] = "*"
+
+    response.headers.add("Access-Control-Allow-Origin", "*")[
+        "Access-Control-Allow-Origin"
+    ] = "*"
+
     # Other headers can be added here if needed
     return response
 
