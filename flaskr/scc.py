@@ -41,9 +41,7 @@ bp = Blueprint("scc", __name__)
 @bp.after_request
 def after_request(response):
 
-    response.headers.add("Access-Control-Allow-Origin", "*")[
-        "Access-Control-Allow-Origin"
-    ] = "*"
+    response.headers.add("Access-Control-Allow-Origin", "*")
 
     # Other headers can be added here if needed
     return response
