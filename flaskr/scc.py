@@ -34,7 +34,16 @@ books = [
     },
 ]
 
+
 bp = Blueprint("scc", __name__)
+
+
+@bp.after_request
+def after_request(response):
+    header = response.headers
+    header["Access-Control-Allow-Origin"] = "*"
+    # Other headers can be added here if needed
+    return response
 
 
 @bp.route("/")
