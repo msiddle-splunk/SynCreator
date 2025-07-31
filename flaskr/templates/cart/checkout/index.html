@@ -1,0 +1,158 @@
+{% extends 'site.html' %}
+{% block content %}
+<header>
+  <div class="navbar">
+    <div class="container d-flex justify-content-between">
+      <div class="h-free-shipping">Free shipping with $75 purchase! &nbsp;&nbsp;</div>
+      <div class="h-controls">
+        <div class="h-control">
+          <img src="{{ url_for('static', filename='icons/Hipster_CurrencyIcon.svg') }}"" alt=" icon" class="icon" />
+          <form method="POST" class="controls-form" action="/setCurrency" id="currency_form">
+            <select name="currency_code" onchange="document.getElementById('currency_form').submit();">
+
+              <option value="EUR">EUR</option>
+
+              <option value="USD" selected="selected">USD</option>
+
+              <option value="JPY">JPY</option>
+
+              <option value="GBP">GBP</option>
+
+              <option value="TRY">TRY</option>
+
+              <option value="CAD">CAD</option>
+
+            </select>
+          </form>
+          <img src="{{ url_for('static', filename='icons/Hipster_DownArrow.svg') }}"" alt=" icon" class="icon arrow" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar sub-navbar">
+    <div class="container d-flex justify-content-between">
+      <a href="{{ url_for('scc.view', username=settings[4] )}}" class="navbar-brand d-flex align-items-center">
+        <img src="{{ url_for('static', filename='icons/Hipster_NavLogo.svg') }}"" alt=" logo" class="logo" />
+      </a>
+      <div class="controls">
+        <a href="/cart">
+          <img src="{{ url_for('static', filename='icons/Hipster_CartIcon.svg') }}"" alt=" cart-icon" class="logo" />
+          <span>Cart
+
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main role="main" class="order">
+  <div class="py-5">
+    <div class="container py-3 px-lg-5">
+      <div class="row mt-5 py-2">
+        <div class="col text-center">
+          <img class="order-logo" src="{{ url_for('static', filename='icons/Hipster_HeroLogoCyan.svg') }}" alt="icon" />
+          <h3>
+            Your order is complete!
+          </h3>
+          <p>Order Confirmation ID</p>
+          <p class="mg-bt"><strong>a9fcc465-b6ba-11ed-9f56-6a9a250abbb4</strong></p>
+          <p>Shipping Tracking ID</p>
+          <p class="mg-bt"><strong>TH-44537-225907116</strong></p>
+          <p>Shipping Cost</p>
+          <p class="mg-bt"><strong>USD 0.00</strong></p>
+          <p>Total Paid</p>
+          <p class="mg-bt"><strong>USD 0.00</strong></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="container py-3 px-lg-5">
+      <div class="row py-2 text-center">
+        <a class="btn btn-info" href="{{ url_for('scc.view', username=settings[4] )}}" role="button" style="margin-top: 40px; margin-bottom: 40px;">Keep Browsing</a>
+      </div>
+    </div>
+
+    <section class="recommendations">
+      <div class="container">
+        <div class="image">
+          <img src="{{ url_for('static', filename='icons/Hipster_OtherProducts.svg') }}" alt="icon" />
+        </div>
+        <div class="row prods">
+
+          <div class="col-md-3">
+            <div class="h-card card mb-3 box-shadow">
+              <a href="{{ url_for('scc.view', username=settings[4] )}}/product/L9ECAV7KIM">
+                <img alt="" style="width: 100%; height: auto;"
+                  src="{{ url_for('static', filename='img/products/terrarium.jpg') }}">
+                <div class="card-hover"></div>
+              </a>
+              <div class="card-body text-center py-2">
+                <h5 class="card-title h-card-title">
+                  Terrarium
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="h-card card mb-3 box-shadow">
+              <a href="{{ url_for('scc.view', username=settings[4] )}}/product/LS4PSXUNUM">
+                <img alt="" style="width: 100%; height: auto;"
+                  src="{{ url_for('static', filename='img/products/camp-mug.jpg') }}">
+                <div class="card-hover"></div>
+              </a>
+              <div class="card-body text-center py-2">
+                <h5 class="card-title h-card-title">
+                  Metal Camping Mug
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="h-card card mb-3 box-shadow">
+              <a href="{{ url_for('scc.view', username=settings[4] )}}/product/OLJCESPC7Z">
+                <img alt="" style="width: 100%; height: auto;"
+                  src="{{ url_for('static', filename='img/products/typewriter.jpg') }}">
+                <div class="card-hover"></div>
+              </a>
+              <div class="card-body text-center py-2">
+                <h5 class="card-title h-card-title">
+                  Vintage Typewriter
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="h-card card mb-3 box-shadow">
+              <a href="{{ url_for('scc.view', username=settings[4] )}}/product/9SIQT8TOJO">
+                <img alt="" style="width: 100%; height: auto;"
+                  src="{{ url_for('static', filename='img/products/city-bike.jpg') }}">
+                <div class="card-hover"></div>
+              </a>
+              <div class="card-body text-center py-2">
+                <h5 class="card-title h-card-title">
+                  City Bike
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="py-5">
+  <div class="footer-top">
+    <div class="container footer-social">
+      <p class="footer-text">© 2020 Google Inc (<a href="https://github.com/signalfx/microservices-demo">Source
+          Code</a>) — </p>
+      <p class="footer-text"> This website is hosted for demo purposes only. It is not an actual shop. This is not a
+        Google product.</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}
