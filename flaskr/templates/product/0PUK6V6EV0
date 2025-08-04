@@ -1,4 +1,4 @@
-{% extends 'site.html' %} {% block content %}
+{% extends 'site.html' %} {% set url_split = request.url.split('/') %} {% block content %}
 <header>
     <div class="navbar">
         <div class="container d-flex justify-content-between">
@@ -76,17 +76,6 @@
             document.addEventListener('DOMContentLoaded', fn);
         }
     }
-
-    docReady(() => {
-        const formElem = document.getElementsByTagName('form')[1];
-        formElem.onsubmit = (e) => {
-            e.preventDefault();
-            fetch('/cart', {
-                method: 'POST',
-                body: new FormData(formElem),
-            }).then(() => (window.location.href = '/cart'));
-        };
-    });
 </script>
 <main role="main">
     <div class="h-product">
@@ -104,31 +93,7 @@
                         It still works.
                     </div>
 
-                    <form method="POST" action="/cart" class="form-inline">
-                        <input type="hidden" name="product_id" value="0PUK6V6EV0" />
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="quantity">Quantity</label>
-                            </div>
-                            <select
-                                name="quantity"
-                                id="quantity"
-                                class="custom-select form-control form-control-lg"
-                            >
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>10</option>
-                            </select>
-                            <a
-                                href="{{ url_for('scc.cart', username=settings[4])}}"
-                                class="btn btn-info btn-lg ml-3"
-                                >Add to Cart</a
-                            >
-                        </div>
-                    </form>
+                    {% include 'form.html' %}
                 </div>
             </div>
         </div>

@@ -1,0 +1,57 @@
+<form
+    method="POST"
+    action="{{ url_for('scc.view', username=settings[4]) }}/cart/complete"
+    class="form-inline"
+>
+    <input type="hidden" name="product_id" value="{{ url_split[-1]}}" />
+    <div class="input-group-prepend">
+        <label class="input-group-text" for="first_conf_visit">First .conf visit?</label>
+    </div>
+    <select
+        name="first_conf_visit"
+        id="first_conf_visit"
+        class="custom-select form-control form-control-lg"
+    >
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+    <div class="input-group">
+        <div class="form-row">
+            <div class="col-md-5 mb-3">
+                <label for="city">City</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="city"
+                    id="city"
+                    value="Mountain View"
+                    required
+                />
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="state">State</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="state"
+                    id="state"
+                    value="CA"
+                    required
+                />
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="country">Country</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="country"
+                    placeholder="Country Name"
+                    name="country"
+                    value="United States"
+                    required
+                />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-info btn-lg ml-3">Buy</button>
+    </div>
+</form>
