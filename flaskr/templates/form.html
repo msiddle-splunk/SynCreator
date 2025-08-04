@@ -1,3 +1,4 @@
+{% set url_split = request.url.split('/') %}
 <form
     method="POST"
     action="{{ url_for('scc.view', username=settings[4]) }}/cart/complete"
