@@ -43,7 +43,7 @@ def register():
         if error is None:
             db.execute(
                 "INSERT INTO scc (username, password, condition) VALUES (?, ?, ?)",
-                (username, generate_password_hash(password), condition),
+                (username, generate_password_hash(password,method='pbkdf2'), condition),
             )
             db.commit()
             return redirect(url_for("auth.login"))

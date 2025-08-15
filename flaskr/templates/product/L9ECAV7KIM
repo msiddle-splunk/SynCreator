@@ -49,7 +49,7 @@
                 class="navbar-brand d-flex align-items-center"
             >
                 <img
-                    src="{{ url_for('static', filename='icons/Hipster_NavLogo.svg') }}"
+                    src="{{ url_for('static', filename='icons/splunk-conf25-logo-horz-w-rgb.svg') }}"
                     alt="logo"
                     class="logo"
                 />
@@ -90,97 +90,11 @@
                     <p class="text-muted">USD 36.44</p>
                     <div>
                         <h6>Product Description:</h6>
-                        This terrarium will looks great in your white painted living room.
+                        Whether you’re starting your running journey or an expert eager to switch up your pace, the Downshifter 13 is down for the ride. With breathable mesh and an updated internal fit band, it helps you find that extra gear or take that first stride toward chasing down your goals.
                     </div>
 
                     {% include 'form.html' %}
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container py-3 px-lg-5 py-lg-5">
-        <section class="recommendations">
-            <div class="container">
-                <div class="image">
-                    <img
-                        src="{{ url_for('static', filename='icons/Hipster_OtherProducts.svg') }}"
-                        alt="icon"
-                    />
-                </div>
-                <div class="row prods">
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="9SIQT8TOJO">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/city-bike.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">City Bike</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="6E92ZMYYFZ">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/air-plant.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">Air Plant</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="2ZYFJ3GM2N">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/film-camera.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">Film Camera</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="OLJCESPC7Z">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/typewriter.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">Vintage Typewriter</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="container">
-            <div class="alert alert-dark" role="alert">
-                <strong>Advertisement:</strong>
-                <a href="6E92ZMYYFZ" rel="nofollow" target="_blank" class="alert-link">
-                    Air plants for sale. Buy two, get third one for free
-                </a>
             </div>
         </div>
     </div>

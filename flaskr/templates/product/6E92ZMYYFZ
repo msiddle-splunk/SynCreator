@@ -49,7 +49,7 @@
                 class="navbar-brand d-flex align-items-center"
             >
                 <img
-                    src="{{ url_for('static', filename='icons/Hipster_NavLogo.svg') }}"
+                    src="{{ url_for('static', filename='icons/splunk-conf25-logo-horz-w-rgb.svg') }}"
                     alt="logo"
                     class="logo"
                 />
@@ -90,98 +90,11 @@
                     <p class="text-muted">USD 12.29</p>
                     <div>
                         <h6>Product Description:</h6>
-                        Have you ever wondered whether air plants need water? Buy one and figure
-                        out.
+                        First released in 1977, the LD-1000's dramatically flared heel was originally created to support long-distance runners. A fan favorite, now you can get your hands on one of Nike's most famous innovations too.
                     </div>
 
                     {% include 'form.html' %}
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container py-3 px-lg-5 py-lg-5">
-        <section class="recommendations">
-            <div class="container">
-                <div class="image">
-                    <img
-                        src="{{ url_for('static', filename='icons/Hipster_OtherProducts.svg') }}"
-                        alt="icon"
-                    />
-                </div>
-                <div class="row prods">
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="OLJCESPC7Z">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/typewriter.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">Vintage Typewriter</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="9SIQT8TOJO">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/city-bike.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">City Bike</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="L9ECAV7KIM">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/terrarium.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">Terrarium</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="66VCHSJNUP">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/camera-lens.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">Vintage Camera Lens</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="container">
-            <div class="alert alert-dark" role="alert">
-                <strong>Advertisement:</strong>
-                <a href="6E92ZMYYFZ" rel="nofollow" target="_blank" class="alert-link">
-                    Air plants for sale. Buy two, get third one for free
-                </a>
             </div>
         </div>
     </div>

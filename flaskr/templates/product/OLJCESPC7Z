@@ -49,7 +49,7 @@
                 class="navbar-brand d-flex align-items-center"
             >
                 <img
-                    src="{{ url_for('static', filename='icons/Hipster_NavLogo.svg') }}"
+                    src="{{ url_for('static', filename='icons/splunk-conf25-logo-horz-w-rgb.svg') }}"
                     alt="logo"
                     class="logo"
                 />
@@ -95,92 +95,6 @@
 
                     {% include 'form.html' %}
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container py-3 px-lg-5 py-lg-5">
-        <section class="recommendations">
-            <div class="container">
-                <div class="image">
-                    <img
-                        src="{{ url_for('static', filename='icons/Hipster_OtherProducts.svg') }}"
-                        alt="icon"
-                    />
-                </div>
-                <div class="row prods">
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="LS4PSXUNUM">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/camp-mug.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">Metal Camping Mug</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="6E92ZMYYFZ">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/air-plant.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">Air Plant</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="0PUK6V6EV0">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/record-player.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">Vintage Record Player</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="h-card card mb-3 box-shadow">
-                            <a href="9SIQT8TOJO">
-                                <img
-                                    alt=""
-                                    style="width: 100%; height: auto"
-                                    src="{{ url_for('static', filename='img/products/city-bike.jpg') }}"
-                                />
-                                <div class="card-hover"></div>
-                            </a>
-                            <div class="card-body text-center py-2">
-                                <h5 class="card-title h-card-title">City Bike</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="container">
-            <div class="alert alert-dark" role="alert">
-                <strong>Advertisement:</strong>
-                <a href="0PUK6V6EV0" rel="nofollow" target="_blank" class="alert-link">
-                    Vintage record player for sale. 30% off.
-                </a>
             </div>
         </div>
     </div>
