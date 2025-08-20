@@ -94,14 +94,14 @@ def splunk():
         return redirect(url_for("index"))
 
 
-@bp.route("/getPrice", methods=("GET"))
+@bp.route("/getPrice", methods=["GET"])
 def get_price():
     product_id = request.args.get("product_id")
     # Simulate fetching the price from a database or external service
     endpoint = f"https://ec2-35-169-185-175.compute-1.amazonaws.com:8089/servicesNS/nobody/search/storage/collections/data/sneaks/{product_id}"
-    response = requests.get(endpoint, auth=(user, token))
-
-    return response.json().get("price")
+    response = requests.get(endpoint, auth=(user, token), verify=False)
+    price = json.loads(response.json()).get("price")
+    return price
 
 
 @bp.route("/set/<string:condition>", methods=("GET", "POST"))
