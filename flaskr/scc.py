@@ -100,7 +100,7 @@ def get_price():
     # Simulate fetching the price from a database or external service
     endpoint = f"https://ec2-35-169-185-175.compute-1.amazonaws.com:8089/servicesNS/nobody/search/storage/collections/data/sneaks/{product_id}"
     response = requests.get(endpoint, auth=(user, token), verify=False)
-    price = json.loads(response.json()).get("price")
+    price = response.json().get("price")
     return price
 
 
