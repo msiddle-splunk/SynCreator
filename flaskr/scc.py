@@ -100,8 +100,8 @@ def get_price():
     # Simulate fetching the price from a database or external service
     endpoint = f"https://ec2-35-169-185-175.compute-1.amazonaws.com:8089/servicesNS/nobody/splunksneakerstore/storage/collections/data/sneakers/{product_id}"
     response = requests.get(endpoint, auth=(user, token), verify=False)
-
-    print(response)
+    print(response.json())
+    return response.json()
 
 
 @bp.route("/set/<string:condition>", methods=("GET", "POST"))
