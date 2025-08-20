@@ -77,12 +77,24 @@
         }
     }
 </script>
+<script>
+    function getPrice() {
+        const price = fetch('/getPrice?product_id={{ url_split[-1] }}')
+            .then((response) => response.json())
+            .then((data) => {
+                const priceElement = document.querySelector('.product-info p.text-muted');
+                priceElement.textContent = `USD ${data.price}`;
+                console.log('Price fetched:', data.price);
+            })
+            .catch((error) => console.error('Error fetching price:', error));
+    }
+</script>
 <main role="main">
     <div class="h-product">
         <div class="row">
             <div class="col">
                 <img src="{{ url_for('static', filename='img/products/snkr-1.png') }}" />
-            </div>         
+            </div>
             <div class="product-info col">
                 <div class="product-wrapper">
                     <h2>SNKR 1</h2>
@@ -90,9 +102,10 @@
                     <p class="text-muted">USD 65.50</p>
                     <div>
                         <h6>Product Description:</h6>
-                        The radiance lives on in the Nike Air Force 1 '07, the b-ball icon that puts a fresh spin on what you know best: crisp leather, bold colors and the perfect amount of flash to make you shine.
+                        The radiance lives on in the Nike Air Force 1 '07, the b-ball icon that puts
+                        a fresh spin on what you know best: crisp leather, bold colors and the
+                        perfect amount of flash to make you shine.
                     </div>
-                 
 
                     {% include 'form.html' %}
                 </div>

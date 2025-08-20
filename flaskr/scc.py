@@ -10,6 +10,13 @@ from flaskr.auth import login_required
 from flaskr.db import get_db
 from flaskr.utils import send2splunk
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+user = os.getenv("SPLK_USER")
+token = os.getenv("SPLK_TOKEN")
+
 books = [
     {
         "id": 0,
@@ -85,6 +92,16 @@ def splunk():
         )
         db.commit()
         return redirect(url_for("index"))
+
+
+@bp.route("/getPrice", methods=("GET"))
+def get_price():
+    product_id = request.args.get("product_id")
+    # Simulate fetching the price from a database or external service
+    endpoint = f"https://ec2-35-169-185-175.compute-1.amazonaws.com:8089/servicesNS/nobody/search/storage/collections/data/sneaks/{product_id}"
+    response = requests.get(endpoint, auth=(user, token))
+
+    return response.json().get("price")
 
 
 @bp.route("/set/<string:condition>", methods=("GET", "POST"))
