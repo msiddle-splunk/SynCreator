@@ -187,7 +187,7 @@ def complete(username):
         (username,),
     ).fetchone()
     hec_url, hec_token = settings[5], settings[6]
-    form_data = request.form.to_dict(flat=False)
+    form_data = request.form.to_dict(flat=True)
     send2splunk(form_data, hec_url, hec_token)
     return render_template("cart/checkout/index.html", settings=settings)
 
