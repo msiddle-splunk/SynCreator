@@ -96,12 +96,12 @@
                             <img
                                 alt=""
                                 style="width: 100%; height: 100%"
-                                src="{{ url_for('static', filename='img/products/snkr-{{ loop.index0 }}.png') }}"
+                                src="{{ url_for('static', filename='img/products/snkr-{{ loop.index }}.png') }}"
                             />
                             <div class="card-hover"></div>
                         </a>
                         <div class="card-body h-card-body">
-                            <h5 class="card-title h-card-title">SNKR {{ loop.index0 }}</h5>
+                            <h5 class="card-title h-card-title">SNKR {{ loop.index }}</h5>
                             <div class="d-flex justify-content-center align-items-center">
                                 <small class="text-muted"> USD {{product.price}} </small>
                             </div>
