@@ -22,8 +22,8 @@
 
 .btn {
     border-radius: 0;
-    color: #111111;
-    background: #e9ecef;
+    color: #ffffff;
+    background: #9733FB;
     border: 1px solid #d1d7dc;
     font-size: 18px;
     padding: 10px 15px;
@@ -33,7 +33,7 @@
 
 .btn-info {
     border: none;
-    background: #4cc8c6;
+    background: #FF0F7B;
 }
 
 .center-contents > * {

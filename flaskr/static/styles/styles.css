@@ -468,7 +468,7 @@ main.home {
     line-height: 1.89;
     letter-spacing: 3.6px;
     text-align: center;
-    color: #111111;
+    color: #ffffff;
     text-transform: uppercase;
     border-radius: 0;
 }
@@ -491,14 +491,14 @@ main.home {
     height: 49px;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    background-color: #4cc8c6;
+    background-color: #FF0F7B;
     margin-left: 30px;
 }
 
 .h-product .btn.btn-info:hover {
     color: #fff;
-    background-color: #138496;
-    border-color: #117a8b;
+    background-color: #9733FB;
+    border-color: #20003F;
 }
 
 .other-products-img {
