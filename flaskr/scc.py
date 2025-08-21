@@ -97,11 +97,25 @@ def splunk():
 @bp.route("/getPrice", methods=["GET"])
 def get_price():
     product_id = request.args.get("product_id")
-    # Simulate fetching the price from a database or external service
-    endpoint = f"https://ec2-35-169-185-175.compute-1.amazonaws.com:8089/servicesNS/nobody/splunksneakerstore/storage/collections/data/sneakers/{product_id}"
-    response = requests.get(endpoint, auth=(user, token), verify=False)
-    print(response.json())
-    return response.json()
+    # Fetch price from Splunk KV store
+    try:
+        endpoint = f"https://ec2-35-169-185-175.compute-1.amazonaws.com:8089/servicesNS/nobody/splunksneakerstore/storage/collections/data/sneakers/{product_id}"
+        response = requests.get(endpoint, auth=(user, token), verify=False)
+        return response.json()
+    except Exception as e:
+        print("Error fetching price:", e)
+        return jsonify({"error": "Failed to fetch price"}), 500
+
+
+def get_products():
+    # Fetch products from Splunk KV store
+    try:
+        endpoint = f"https://ec2-35-169-185-175.compute-1.amazonaws.com:8089/servicesNS/nobody/splunksneakerstore/storage/collections/data/sneakers"
+        response = requests.get(endpoint, auth=(user, token), verify=False)
+        return response.json()
+    except Exception as e:
+        print("Error fetching products:", e)
+        return jsonify({"error": "Failed to fetch products"}), 500
 
 
 @bp.route("/set/<string:condition>", methods=("GET", "POST"))
@@ -162,7 +176,10 @@ def view(username):
             resp.set_cookie("SplunkSynthetic", "abc123")
             return resp
         else:
-            return render_template("scc/" + settings[0] + ".html", settings=settings)
+            products = get_products()
+            return render_template(
+                "scc/" + settings[0] + ".html", settings=settings, products=products
+            )
     else:
         return render_template("scc/404error.html", settings=settings)
 
