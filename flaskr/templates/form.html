@@ -9,7 +9,7 @@
                 if (data.price !== data.rrp) {
                     priceElement.insertAdjacentHTML(
                         'afterend',
-                        `<s class="text-muted">RRP: USD ${data.rrp}</s>`
+                        `<s class="text-muted" style="color:red">RRP: USD ${data.rrp}</s>`
                     );
                 }
                 priceElement.textContent = `USD ${data.price}`;
