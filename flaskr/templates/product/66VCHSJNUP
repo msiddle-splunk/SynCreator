@@ -81,7 +81,7 @@
     <div class="h-product">
         <div class="row">
             <div class="col">
-                <img src="{{ url_for('static', filename='img/products/snkr-6.png') }}" />
+                <img src="{{ url_for('static', filename='img/products/66VCHSJNUP.png') }}" />
             </div>
             <div class="product-info col">
                 <div class="product-wrapper">
@@ -90,7 +90,9 @@
                     <p class="text-muted">USD 12.48</p>
                     <div>
                         <h6>Product Description:</h6>
-                        Comfortable, durable and timeless—it's number 1 for a reason. The classic '80s construction pairs with chrome finish overlays and iridescent accents for style that tracks whether you're on court or on the go.
+                        Comfortable, durable and timeless—it's number 1 for a reason. The classic
+                        '80s construction pairs with chrome finish overlays and iridescent accents
+                        for style that tracks whether you're on court or on the go.
                     </div>
 
                     {% include 'form.html' %}

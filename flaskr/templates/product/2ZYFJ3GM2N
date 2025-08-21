@@ -81,7 +81,7 @@
     <div class="h-product">
         <div class="row">
             <div class="col">
-                <img src="{{ url_for('static', filename='img/products/snkr-3.png') }}" />
+                <img src="{{ url_for('static', filename='img/products/2ZYFJ3GM2N.png') }}" />
             </div>
             <div class="product-info col">
                 <div class="product-wrapper">
@@ -90,7 +90,10 @@
                     <p class="text-muted">USD 2244.99</p>
                     <div>
                         <h6>Product Description:</h6>
-                        On court, it's your skills that make you stand out. But that doesn't mean we can't give you a little visual assist. Swirling pinks add funky, showstopping style to this Tatum 3. A conforming fit, lightweight design and court-ready tech support you through all four quarters.
+                        On court, it's your skills that make you stand out. But that doesn't mean we
+                        can't give you a little visual assist. Swirling pinks add funky,
+                        showstopping style to this Tatum 3. A conforming fit, lightweight design and
+                        court-ready tech support you through all four quarters.
                     </div>
 
                     {% include 'form.html' %}

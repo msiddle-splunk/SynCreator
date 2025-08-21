@@ -81,7 +81,7 @@
     <div class="h-product">
         <div class="row">
             <div class="col">
-                <img src="{{ url_for('static', filename='img/products/snkr-4.png') }}" />
+                <img src="{{ url_for('static', filename='img/products/6E92ZMYYFZ.png') }}" />
             </div>
             <div class="product-info col">
                 <div class="product-wrapper">
@@ -90,7 +90,9 @@
                     <p class="text-muted">USD 12.29</p>
                     <div>
                         <h6>Product Description:</h6>
-                        First released in 1977, the LD-1000's dramatically flared heel was originally created to support long-distance runners. A fan favorite, now you can get your hands on one of Nike's most famous innovations too.
+                        First released in 1977, the LD-1000's dramatically flared heel was
+                        originally created to support long-distance runners. A fan favorite, now you
+                        can get your hands on one of Nike's most famous innovations too.
                     </div>
 
                     {% include 'form.html' %}

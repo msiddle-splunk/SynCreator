@@ -81,7 +81,7 @@
     <div class="h-product">
         <div class="row">
             <div class="col">
-                <img src="{{ url_for('static', filename='img/products/snkr-7.png') }}" />
+                <img src="{{ url_for('static', filename='img/products/L9ECAV7KIM.png') }}" />
             </div>
             <div class="product-info col">
                 <div class="product-wrapper">
@@ -90,7 +90,10 @@
                     <p class="text-muted">USD 36.44</p>
                     <div>
                         <h6>Product Description:</h6>
-                        Whether you’re starting your running journey or an expert eager to switch up your pace, the Downshifter 13 is down for the ride. With breathable mesh and an updated internal fit band, it helps you find that extra gear or take that first stride toward chasing down your goals.
+                        Whether you’re starting your running journey or an expert eager to switch up
+                        your pace, the Downshifter 13 is down for the ride. With breathable mesh and
+                        an updated internal fit band, it helps you find that extra gear or take that
+                        first stride toward chasing down your goals.
                     </div>
 
                     {% include 'form.html' %}
