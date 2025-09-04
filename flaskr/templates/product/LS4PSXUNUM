@@ -86,18 +86,14 @@
             <div class="product-info col">
                 <div class="product-wrapper">
                     <h2>SNKR 8</h2>
-
                     <p class="text-muted">USD 24.33</p>
                     <div>
                         <h6>Product Description:</h6>
                         If you want to know what A'ja is all about, look at the tattoo on her right
-                        bicep next time she flexes after an and-one. She will never apologize for
-                        being her true self. She's boisterous and bold but also kind and caring.
-                        This special design is inspired by her authenticity. And to help keep her
-                        fresh for every battle, plush Cushlon 3.0 foam provides unapologetic
-                        comfort.
+                        bicep next time she flexes after an and-one. This special design is inspired 
+                        by her authenticity. And to help keep her fresh for every battle, plush Cushlon 
+                        3.0 foam provides unapologetic comfort.
                     </div>
-
                     {% include 'form.html' %}
                 </div>
             </div>
