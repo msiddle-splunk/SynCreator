@@ -491,14 +491,14 @@ main.home {
     height: 49px;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    background-color: #FF0F7B;
+    background-color: #ff0f7b;
     margin-left: 30px;
 }
 
 .h-product .btn.btn-info:hover {
     color: #fff;
-    background-color: #9733FB;
-    border-color: #20003F;
+    background-color: #9733fb;
+    border-color: #20003f;
 }
 
 .other-products-img {

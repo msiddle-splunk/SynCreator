@@ -5,9 +5,19 @@
             .then((response) => response.json())
             .then((data) => {
                 const priceElement = document.querySelector('.product-info p.text-muted');
+
+                if (data.price !== data.rrp) {
+                    priceElement.insertAdjacentHTML(
+                        'afterend',
+                        `<s class="text-muted" style="color:red">RRP: USD ${data.rrp}</s>`
+                    );
+                }
                 priceElement.textContent = `USD ${data.price}`;
+                // Adding price to form submission
                 document.getElementById('product_price').value = data.price;
-                console.log('Price fetched:', data.price);
+
+                const sneakerName = document.querySelector('.product-info h2');
+                sneakerName.textContent = data.sneaker_id;
             })
             .catch((error) => console.error('Error fetching price:', error));
     }

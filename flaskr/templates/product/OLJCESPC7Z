@@ -81,7 +81,7 @@
     <div class="h-product">
         <div class="row">
             <div class="col">
-                <img src="{{ url_for('static', filename='img/products/snkr-9.png') }}" />
+                <img src="{{ url_for('static', filename='img/products/OLJCESPC7Z.png') }}" />
             </div>
             <div class="product-info col">
                 <div class="product-wrapper">

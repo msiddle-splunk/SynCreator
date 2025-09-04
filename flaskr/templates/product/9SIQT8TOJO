@@ -81,7 +81,7 @@
     <div class="h-product">
         <div class="row">
             <div class="col">
-                <img src="{{ url_for('static', filename='img/products/snkr-5.png') }}" />
+                <img src="{{ url_for('static', filename='img/products/9SIQT8TOJO.png') }}" />
             </div>
             <div class="product-info col">
                 <div class="product-wrapper">
@@ -90,7 +90,9 @@
                     <p class="text-muted">USD 789.50</p>
                     <div>
                         <h6>Product Description:</h6>
-                        Comfortable, durable and timeless—it's number 1 for a reason. The '80s construction pairs with classic colors for style that tracks whether you're on court or on the go.
+                        Comfortable, durable and timeless—it's number 1 for a reason. The '80s
+                        construction pairs with classic colors for style that tracks whether you're
+                        on court or on the go.
                     </div>
 
                     {% include 'form.html' %}

@@ -81,7 +81,7 @@
     <div class="h-product">
         <div class="row">
             <div class="col">
-                <img src="{{ url_for('static', filename='img/products/snkr-2.png') }}" />
+                <img src="{{ url_for('static', filename='img/products/1YMWWN1N4O.png') }}" />
             </div>
             <div class="product-info col">
                 <div class="product-wrapper">
@@ -90,7 +90,11 @@
                     <p class="text-muted">USD 123.99</p>
                     <div>
                         <h6>Product Description:</h6>
-                        As cool today as when it first dropped more than 40 years ago, the AF1 is a classic you can count on. Its durable construction, Air cushioning and grippy tread will see you through recess after recess. And while they look great fresh out of the box, they remain cool even when covered in scuffs and scrapes. In fact, they might be even better.
+                        As cool today as when it first dropped more than 40 years ago, the AF1 is a
+                        classic you can count on. Its durable construction, Air cushioning and
+                        grippy tread will see you through recess after recess. And while they look
+                        great fresh out of the box, they remain cool even when covered in scuffs and
+                        scrapes. In fact, they might be even better.
                     </div>
 
                     {% include 'form.html' %}
