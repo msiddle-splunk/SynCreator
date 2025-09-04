@@ -96,7 +96,6 @@
                         great fresh out of the box, they remain cool even when covered in scuffs and
                         scrapes. In fact, they might be even better.
                     </div>
-
                     {% include 'form.html' %}
                 </div>
             </div>

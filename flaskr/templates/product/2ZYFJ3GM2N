@@ -95,7 +95,6 @@
                         showstopping style to this Tatum 3. A conforming fit, lightweight design and
                         court-ready tech support you through all four quarters.
                     </div>
-
                     {% include 'form.html' %}
                 </div>
             </div>

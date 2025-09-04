@@ -86,7 +86,6 @@
             <div class="product-info col">
                 <div class="product-wrapper">
                     <h2>SNKR 4</h2>
-
                     <p class="text-muted">USD 12.29</p>
                     <div>
                         <h6>Product Description:</h6>
@@ -94,7 +93,6 @@
                         originally created to support long-distance runners. A fan favorite, now you
                         can get your hands on one of Nike's most famous innovations too.
                     </div>
-
                     {% include 'form.html' %}
                 </div>
             </div>

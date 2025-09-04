@@ -93,8 +93,8 @@
                         bicep next time she flexes after an and-one. This special design is inspired 
                         by her authenticity. And to help keep her fresh for every battle, plush Cushlon 
                         3.0 foam provides unapologetic comfort.
-                        {% include 'form.html' %}
                     </div>
+                    {% include 'form.html' %}
                 </div>
             </div>
         </div>

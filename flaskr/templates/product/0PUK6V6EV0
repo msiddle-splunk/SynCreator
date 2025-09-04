@@ -95,7 +95,6 @@
                         a fresh spin on what you know best: crisp leather, bold colors and the
                         perfect amount of flash to make you shine.
                     </div>
-
                     {% include 'form.html' %}
                 </div>
             </div>

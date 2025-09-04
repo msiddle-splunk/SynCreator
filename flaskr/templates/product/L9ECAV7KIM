@@ -95,7 +95,6 @@
                         an updated internal fit band, it helps you find that extra gear or take that
                         first stride toward chasing down your goals.
                     </div>
-
                     {% include 'form.html' %}
                 </div>
             </div>
