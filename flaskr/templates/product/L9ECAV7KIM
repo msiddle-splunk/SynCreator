@@ -2,7 +2,7 @@
 <header>
     <div class="navbar">
         <div class="container d-flex justify-content-between">
-            <div class="h-free-shipping">Free shipping with $75 purchase! &nbsp;&nbsp;</div>
+            <!--<div class="h-free-shipping">Free shipping with $75 purchase! &nbsp;&nbsp;</div>
             <div class="h-controls">
                 <div class="h-control">
                     <img
@@ -39,7 +39,7 @@
                         class="icon arrow"
                     />
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
     <div class="navbar sub-navbar">
@@ -54,7 +54,7 @@
                     class="logo"
                 />
             </a>
-            <div class="controls">
+            <!--<div class="controls">
                 <a href="/cart">
                     <img
                         src="{{ url_for('static', filename='icons/Hipster_CartIcon.svg') }}"
@@ -63,7 +63,7 @@
                     />
                     <span>Cart </span>
                 </a>
-            </div>
+            </div>-->
         </div>
     </div>
 </header>
@@ -105,7 +105,7 @@
 
 <footer class="py-5">
     <div class="footer-top">
-        <div class="container footer-social">
+        <!--<div class="container footer-social">
             <p class="footer-text">
                 © 2020 Google Inc (<a href="https://github.com/signalfx/microservices-demo"
                     >Source Code</a
@@ -115,7 +115,7 @@
                 This website is hosted for demo purposes only. It is not an actual shop. This is not
                 a Google product.
             </p>
-        </div>
+        </div>-->
     </div>
 </footer>
 {% endblock %}
