@@ -422,7 +422,7 @@ main.home {
 }
 
 .h-product .col img {
-    width: 1000px;
+    width: 500px;
 }
 
 .h-product .product-info {
@@ -468,7 +468,7 @@ main.home {
     line-height: 1.89;
     letter-spacing: 3.6px;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     text-transform: uppercase;
     border-radius: 0;
 }
