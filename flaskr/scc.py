@@ -121,22 +121,23 @@ def get_products():
 @bp.route("/checkAnswers", methods=["POST"])
 def check_answers():
     form_data = request.form.to_dict(flat=True)
+    print(form_data)
     correct_answers = 0
     for key, value in form_data.items():
         if key.startswith("Q1"):
-            if value == "A":
+            if value == "Search Programming Language":
                 correct_answers += 1
         elif key.startswith("Q2"):
-            if value == "B":
+            if value == "8":
                 correct_answers += 1
         elif key.startswith("Q3"):
-            if value == "C":
+            if value == "Common Information Model" or value="CIM":
                 correct_answers += 1
         elif key.startswith("Q4"):
-            if value == "A":
+            if value == "Harry":
                 correct_answers += 1
         elif key.startswith("Q5"):
-            if value == "B":
+            if value == "Yellow":
                 correct_answers += 1
     if correct_answers == 5:
         return render_template("quiz_pass.html", score=correct_answers)
