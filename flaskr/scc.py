@@ -124,19 +124,19 @@ def check_answers():
     print(form_data)
     correct_answers = 0
     for key, value in form_data.items():
-        if key.startswith("Q1"):
+        if key.startswith("q1"):
             if value == "Search Processing Language":
                 correct_answers += 1
-        elif key.startswith("Q2"):
+        if key.startswith("q2"):
             if value == "8":
                 correct_answers += 1
-        elif key.startswith("Q3"):
+        if key.startswith("q3"):
             if value == "Common Information Model" or value == "CIM":
                 correct_answers += 1
-        elif key.startswith("Q4"):
+        if key.startswith("q4"):
             if value == "Harry":
                 correct_answers += 1
-        elif key.startswith("Q5"):
+        if key.startswith("q5"):
             if value == "Yellow":
                 correct_answers += 1
     if correct_answers == 5:
