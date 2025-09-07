@@ -118,6 +118,17 @@ def get_products():
         return jsonify({"error": "Failed to fetch products"}), 500
 
 
+@bp.route("/view/<string:username>/quiz")
+def quiz(username):
+    db = get_db()
+    settings = db.execute(
+        "SELECT condition, realm, rum_token, ingest_token, username as u"
+        " FROM scc WHERE username = ?",
+        (username,),
+    ).fetchone()
+    return render_template("quiz.html", settings=settings)
+
+
 @bp.route("/set/<string:condition>", methods=("GET", "POST"))
 def set(condition):
     if g.user is None:

@@ -1,0 +1,203 @@
+{% extends 'site.html' %} {% set url_split = request.url.split('/') %} {% block content %}
+<header>
+    <div class="navbar">
+        <div class="container d-flex justify-content-between">
+            <!--<div class="h-free-shipping">
+                Splunk SynCreator - Current Condition: {{ settings[0]|upper }}
+            </div>
+            <div class="h-controls">
+                <div class="h-control">
+                    <img
+                        src="{{ url_for('static', filename='icons/Hipster_CurrencyIcon.svg') }}"
+                        alt="icon"
+                        class="icon"
+                    />
+                    <form
+                        method="POST"
+                        class="controls-form"
+                        action="/setCurrency"
+                        id="currency_form"
+                    >
+                        <select
+                            name="currency_code"
+                            onchange="document.getElementById('currency_form').submit();"
+                        >
+                            <option value="EUR">EUR</option>
+
+                            <option value="USD" selected="selected">USD</option>
+
+                            <option value="JPY">JPY</option>
+
+                            <option value="GBP">GBP</option>
+
+                            <option value="TRY">TRY</option>
+
+                            <option value="CAD">CAD</option>
+                        </select>
+                    </form>
+                    <img
+                        src="{{ url_for('static', filename='icons/Hipster_DownArrow.svg') }}"
+                        alt="icon"
+                        class="icon arrow"
+                    />
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div class="navbar sub-navbar">
+        <div class="container d-flex justify-content-between">
+            <a href="{{ settings[4] }}" class="navbar-brand d-flex align-items-center">
+                <img
+                    src="{{ url_for('static', filename='icons/splunk-conf25-logo-horz-w-rgb.svg') }}"
+                    alt="logo"
+                    class="logo"
+                />
+            </a>
+            <!--<div class="controls">
+                <a href="/cart">
+                    <img
+                        src="{{ url_for('static', filename='icons/Hipster_CartIcon.svg') }}"
+                        alt="cart-icon"
+                        class="logo"
+                    />
+                    <span>Cart </span>
+                </a>
+            </div>-->
+        </div>
+    </div>
+</header>
+
+<main role="main" class="home">
+    <section class="jumbotron text-center mb-0 h-jumbotron">
+        <div class="container">
+            <img
+                src="{{ url_for('static', filename='icons/splunk-snkr-logo.png') }}"
+                alt="icon"
+                class="icon search-icon"
+            />
+        </div>
+    </section>
+
+    <div class="h-grid py-5 bg-light">
+        <div class="container">
+            <div class="row h-row">
+                <img
+                    src="{{ url_for('static', filename='icons/Hipster_HotProducts.svg') }}"
+                    alt="icon"
+                    class="icon search-icon"
+                />
+            </div>
+            <div class="row">
+
+    <form
+    method="POST"
+    action="{{ url_for('scc.view', username=settings[4]) }}/cart/complete"
+    class="form-inline"
+>
+
+    <select
+        name="first_conf_visit"
+        id="first_conf_visit"
+        class="custom-select form-control form-control-lg"
+    >
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+    <div class="input-group">
+        <div class="form-row">
+            <div class="col-md-5 mb-3">
+                <label for="form_name">Name</label>
+                <input type="text" class="form-control" name="form_name" id="form_name" required />
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="company">Company</label>
+                <input type="text" class="form-control" name="company" id="company" required />
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="city">City</label>
+                <input type="text" class="form-control" name="city" id="city" required />
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="state">State</label>
+                <input type="text" class="form-control" name="state" id="state" required />
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="country">Country</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="country"
+                    placeholder="Country Name"
+                    name="country"
+                    required
+                />
+            </div>
+        </div>
+    </div>
+</form>
+
+    </div>
+</main>
+
+<footer class="py-5">
+    <div class="footer-top">
+        <!--<div class="container footer-social">
+            <p class="footer-text">
+                © 2020 Google Inc (<a href="https://github.com/signalfx/microservices-demo"
+                    >Source Code</a
+                >) —
+            </p>
+            <p class="footer-text">
+                This website is hosted for demo purposes only. It is not an actual shop. This is not
+                a Google product.
+            </p>
+        </div>-->
+        <!--
+    <div style="margin: 10px;">
+      <h3>Splunk Synthetics Script</h3>
+      <pre id="selenium_json"></pre>
+    </div>
+    --></div>
+</footer>
+<script>
+    data = {
+        version: '1.1',
+        name: 'SynCreator',
+        url: '{{ url_split[0] }}//{{ url_split[1] }}{{ url_split[2] }}/',
+        urls: ['{{ url_split[0] }}//{{ url_split[1] }}{{ url_split[2] }}/'],
+        tests: [
+            {
+                name: 'SynCreator',
+                url: '{{ url_split[0] }}//{{ url_split[1] }}{{ url_split[2] }}/',
+                commands: [
+                    {
+                        command: 'open',
+                        target: '/{{ url_split[3] }}/{{ url_split[4] }}',
+                        value: '',
+                        comment: '',
+                    },
+                    {
+                        comment: 'Check Phrase',
+                        command: 'waitForElementPresent',
+                        target: 'id=ajax-content',
+                        value: '10000',
+                    },
+                ],
+            },
+        ],
+        suites: [
+            {
+                name: 'SynCreator',
+                tests: [],
+            },
+        ],
+    };
+
+    /*document.getElementById("selenium_json").innerHTML = JSON.stringify(data, undefined, 2);*/
+
+    setTimeout(
+        "$.ajax({ url: '../air-plant', success: function(data) { $('#ajax-content').html(data);}});",
+        1000
+    );
+</script>
+{% endblock %}
