@@ -131,7 +131,7 @@ def check_answers():
             if value == "8":
                 correct_answers += 1
         elif key.startswith("Q3"):
-            if value == "Common Information Model" or value="CIM":
+            if value == "Common Information Model" or value == "CIM":
                 correct_answers += 1
         elif key.startswith("Q4"):
             if value == "Harry":
