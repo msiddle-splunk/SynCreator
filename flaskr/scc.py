@@ -118,6 +118,42 @@ def get_products():
         return jsonify({"error": "Failed to fetch products"}), 500
 
 
+@bp.route("/checkAnswers", methods=["POST"])
+def check_answers():
+    form_data = request.form.to_dict(flat=True)
+    correct_answers = 0
+    for key, value in form_data.items():
+        if key.startswith("Q1"):
+            if value == "A":
+                correct_answers += 1
+        elif key.startswith("Q2"):
+            if value == "B":
+                correct_answers += 1
+        elif key.startswith("Q3"):
+            if value == "C":
+                correct_answers += 1
+        elif key.startswith("Q4"):
+            if value == "A":
+                correct_answers += 1
+        elif key.startswith("Q5"):
+            if value == "B":
+                correct_answers += 1
+    if correct_answers == 5:
+        return render_template("quiz_pass.html", score=correct_answers)
+    else:
+        return render_template("quiz_fail.html", score=correct_answers)
+
+
+@bp.route("/quiz_pass.html", methods=["GET"])
+def quiz_pass():
+    return render_template("quiz_pass.html")
+
+
+@bp.route("/quiz_fail.html", methods=["GET"])
+def quiz_fail():
+    return render_template("quiz_fail.html")
+
+
 @bp.route("/view/<string:username>/quiz")
 def quiz(username):
     db = get_db()
