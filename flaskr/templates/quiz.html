@@ -79,7 +79,7 @@
     </section>
 
     <div class="h-grid py-5 bg-light">
-        <div class="container">
+        <!--<div class="container">
             <div class="row h-row">
                 <img
                     src="{{ url_for('static', filename='icons/Hipster_HotProducts.svg') }}"
@@ -87,11 +87,11 @@
                     class="icon search-icon"
                 />
             </div>
-            <div class="row">
+        <div class="row">-->
 
     <form
     method="POST"
-    action="{{ url_for('scc.view', username=settings[4]) }}/cart/complete"
+    action="/checkAnswers"
     class="form-inline"
 >
 
@@ -106,32 +106,25 @@
     <div class="input-group">
         <div class="form-row">
             <div class="col-md-5 mb-3">
-                <label for="form_name">Name</label>
-                <input type="text" class="form-control" name="form_name" id="form_name" required />
+                <label for="form_name">Q1: What does SPL stand for?</label>
+                <input type="text" class="form-control" name="q1" id="q1" required />
             </div>
             <div class="col-md-5 mb-3">
-                <label for="company">Company</label>
-                <input type="text" class="form-control" name="company" id="company" required />
+                <label for="company">Q2: How many sneakers are on display in the Splunk Sneaker Store in the Splunked Home?</label>
+                <input type="text" class="form-control" name="q2" id="q2" required />
             </div>
             <div class="col-md-5 mb-3">
-                <label for="city">City</label>
-                <input type="text" class="form-control" name="city" id="city" required />
+                <label for="city">Q3: Which Splunk feature allows you to map raw event data to a standardised format for easier correlation across different data sources?</label>
+                <input type="text" class="form-control" name="q3" id="q3" required />
             </div>
             <div class="col-md-2 mb-3">
-                <label for="state">State</label>
-                <input type="text" class="form-control" name="state" id="state" required />
+                <label for="state">Q4: What is the name of ONE of the Splunked Home pets?</label>
+                <input type="text" class="form-control" name="q4" id="q4" required />
             </div>
-            <div class="col-md-5 mb-3">
-                <label for="country">Country</label>
-                <input
-                    type="text"
-                    class="form-control"
-                    id="country"
-                    placeholder="Country Name"
-                    name="country"
-                    required
-                />
-            </div>
+            <div class="col-md-2 mb-3">
+                <label for="state">Q5: What colour is the dumbbell in the Splunk Gym?</label>
+                <input type="text" class="form-control" name="q5" id="q5" required />
+            </div>            
         </div>
     </div>
 </form>
