@@ -125,7 +125,7 @@ def check_answers():
     correct_answers = 0
     for key, value in form_data.items():
         if key.startswith("Q1"):
-            if value == "Search Programming Language":
+            if value == "Search Processing Language":
                 correct_answers += 1
         elif key.startswith("Q2"):
             if value == "8":
@@ -145,14 +145,26 @@ def check_answers():
         return render_template("quiz_fail.html", score=correct_answers)
 
 
-@bp.route("/quiz_pass.html", methods=["GET"])
-def quiz_pass():
-    return render_template("quiz_pass.html")
+@bp.route("/view/<string:username>/quiz_pass.html", methods=["GET"])
+def quiz_pass(username):
+    db = get_db()
+    settings = db.execute(
+        "SELECT condition, realm, rum_token, ingest_token, username as u"
+        " FROM scc WHERE username = ?",
+        (username,),
+    ).fetchone()
+    return render_template("quiz_pass.html", settings=settings)
 
 
-@bp.route("/quiz_fail.html", methods=["GET"])
-def quiz_fail():
-    return render_template("quiz_fail.html")
+@bp.route("/view/<string:username>/quiz_fail.html", methods=["GET"])
+def quiz_fail(username):
+    db = get_db()
+    settings = db.execute(
+        "SELECT condition, realm, rum_token, ingest_token, username as u"
+        " FROM scc WHERE username = ?",
+        (username,),
+    ).fetchone()
+    return render_template("quiz_fail.html", settings=settings)
 
 
 @bp.route("/view/<string:username>/quiz")

@@ -5,13 +5,13 @@
     </div>
     <div class="navbar sub-navbar">
         <div class="container d-flex justify-content-between">
-            <a href="{{ settings[4] }}" class="navbar-brand d-flex align-items-center">
+            
                 <img
                     src="{{ url_for('static', filename='icons/splunk-conf25-logo-horz-w-rgb.svg') }}"
                     alt="logo"
                     class="logo"
                 />
-            </a>
+            
  
         </div>
     </div>
@@ -68,45 +68,4 @@
     </div>
     --></div>
 </footer>
-<script>
-    data = {
-        version: '1.1',
-        name: 'SynCreator',
-        url: '{{ url_split[0] }}//{{ url_split[1] }}{{ url_split[2] }}/',
-        urls: ['{{ url_split[0] }}//{{ url_split[1] }}{{ url_split[2] }}/'],
-        tests: [
-            {
-                name: 'SynCreator',
-                url: '{{ url_split[0] }}//{{ url_split[1] }}{{ url_split[2] }}/',
-                commands: [
-                    {
-                        command: 'open',
-                        target: '/{{ url_split[3] }}/{{ url_split[4] }}',
-                        value: '',
-                        comment: '',
-                    },
-                    {
-                        comment: 'Check Phrase',
-                        command: 'waitForElementPresent',
-                        target: 'id=ajax-content',
-                        value: '10000',
-                    },
-                ],
-            },
-        ],
-        suites: [
-            {
-                name: 'SynCreator',
-                tests: [],
-            },
-        ],
-    };
-
-    /*document.getElementById("selenium_json").innerHTML = JSON.stringify(data, undefined, 2);*/
-
-    setTimeout(
-        "$.ajax({ url: '../air-plant', success: function(data) { $('#ajax-content').html(data);}});",
-        1000
-    );
-</script>
 {% endblock %}
