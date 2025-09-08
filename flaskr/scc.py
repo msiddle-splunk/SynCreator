@@ -124,20 +124,22 @@ def check_answers():
     print(form_data)
     correct_answers = 0
     for key, value in form_data.items():
+        key = key.lower()
+        value = value[0].lower()
         if key.startswith("q1"):
-            if value == "Search Processing Language":
+            if value == "search processing language":
                 correct_answers += 1
         if key.startswith("q2"):
             if value == "8":
                 correct_answers += 1
         if key.startswith("q3"):
-            if value == "Common Information Model" or value == "CIM":
+            if value == "common information model" or value == "cim":
                 correct_answers += 1
         if key.startswith("q4"):
-            if value == "Harry":
+            if value == "harry":
                 correct_answers += 1
         if key.startswith("q5"):
-            if value == "Yellow":
+            if value == "yellow":
                 correct_answers += 1
     if correct_answers == 5:
         return render_template("quiz_pass.html", quiz_code="SNKRSNSNCKS")
