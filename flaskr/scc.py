@@ -126,6 +126,7 @@ def check_answers():
     for key, value in form_data.items():
         key = key.lower()
         value = value[0].lower()
+        print(f"Key: {key}, Value: {value}")
         if key.startswith("q1"):
             if value == "search processing language":
                 correct_answers += 1
