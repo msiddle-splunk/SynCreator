@@ -56,10 +56,19 @@
         </div>
     </div>
     </head>
-    <body>
+    <main role="main" class="home">
+    <section class="jumbotron text-center mb-0 h-jumbotron">
+        <div class="container">
+            <img
+                src="{{ url_for('static', filename='icons/splunk-snkr-logo.png') }}"
+                alt="icon"
+                class="icon search-icon"
+            />
+        </div>
+    </section>
             <div class="row">
             You entered {{ score }} out of 5 correct answers. Please try again.
             <button><a href=/view/mark/quiz>Try Again</a></button>
         </div>
-    </body>
+    </main>
     </html>

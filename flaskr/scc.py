@@ -140,7 +140,7 @@ def check_answers():
             if value == "Yellow":
                 correct_answers += 1
     if correct_answers == 5:
-        return render_template("quiz_pass.html", score=correct_answers)
+        return render_template("quiz_pass.html", quiz_code="SNKRSNSNCKS")
     else:
         return render_template("quiz_fail.html", score=correct_answers)
 

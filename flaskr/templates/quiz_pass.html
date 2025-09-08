@@ -56,10 +56,21 @@
         </div>
     </div>
     </head>
-    <body>
+    <main role="main" class="home">
+    <section class="jumbotron text-center mb-0 h-jumbotron">
+        <div class="container">
+            <img
+                src="{{ url_for('static', filename='icons/splunk-snkr-logo.png') }}"
+                alt="icon"
+                class="icon search-icon"
+            />
+        </div>
+    </section>
             <div class="row">
-            <!-- INSERT PASS BITS HERE-->
+            <p>Congratulations! You have passed the quiz. 
+            Please enter the following code at the Sneaker Store product page below for a chance to win a $10 gift card for the Splunk Store!</p><br/>
+            <p>{{ quiz_code }}</p>
             <button><a href=/view/mark>Go to store</a></button>
         </div>
-    </body>
+    </main>
     </html>
