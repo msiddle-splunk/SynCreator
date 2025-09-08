@@ -46,13 +46,9 @@
         </style>
         <div class="navbar sub-navbar">
         <div class="container d-flex justify-content-between">
-            
-                <img
-                    src="{{ url_for('static', filename='icons/splunk-conf25-logo-horz-w-rgb.svg') }}"
-                    alt="logo"
-                    class="logo"
-                />
-            </a>
+            <a href="{{ url_for('scc.view', username=settings[4] )}}" class="navbar-brand d-flex align-items-center">
+                <img src="{{ url_for('static', filename='icons/splunk-conf25-logo-horz-w-rgb.svg') }}"" alt=" logo" class="logo" />
+            </a>            
         </div>
     </div>
     </head>
